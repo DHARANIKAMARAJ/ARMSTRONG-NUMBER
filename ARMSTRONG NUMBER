@@ -1,0 +1,29 @@
+#include<stdio.h>
+int main()
+{
+    int n,rem,temp,sum=0,power=1,count=0;
+    scanf("%d",&n);
+    temp=n;
+    while(n)
+    {
+        count++;
+        n/=10;
+    }
+    n=temp;
+    while(temp)
+        {
+            rem=temp%10;
+            
+    for(int i=1;i<=count;i++)
+         {
+             power=rem*power;
+         }
+         sum+=power;
+         power=1;
+         temp/=10;
+        }
+        if(sum==n)
+        printf("YES");
+        else
+        printf("NO");
+}
